@@ -36,12 +36,12 @@ public class GT4500 implements SpaceShip {
   @Override
   public boolean fireTorpedo(FiringMode firingMode) {
 
-    boolean firingSuccess = false;
-
-    if(firingMode == SINGLE) 
+    if(firingMode == FiringMode.SINGLE) 
         return this.fireSingleTorpedo();
-    else if(firingMode == ALL)
+    else if(firingMode == FiringMode.ALL)
         return this.fireAllTorpedo();
+
+    return false;
 
   }
 
